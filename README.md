@@ -12,11 +12,11 @@ Open `adv.py`. There are four parts to the provided code:
 
 You may find the commands `player.current_room.id`, `player.current_room.get_exits()` and `player.travel(direction)` useful.
 
-To solve this path, you'll want to construct your own traversal graph. You start in room `0`, which contains exits `['n', 's', 'w', 'e']`. Your starting graph should look something like this:
+To solve this path, you'll want to construct your own traversal graph. You start in room `0`, which contains exits `['n', 's', 'e', 'w']`. Your starting graph should look something like this:
 
 ```
 {
-  0: {'n': '?', 's': '?', 'w': '?', 'e': '?'}
+  0: {'n': '?', 's': '?', 'e': '?', 'w': '?'}
 }
 ```
 
@@ -24,7 +24,7 @@ Try moving south and you will find yourself in room `5` which contains exits `['
 
 ```
 {
-  0: {'n': '?', 's': 5, 'w': '?', 'e': '?'},
+  0: {'n': '?', 's': 5, 'e': '?', 'w': '?'},
   5: {'n': 0, 's': '?', 'e': '?'}
 }
 ```
@@ -63,5 +63,6 @@ My best path is 957 moves. Can you find a shorter path?
 | ---------- | ----- | ------- | ------- | ------- | -- |
 | _Student can demonstrate applied knowledge of Graph Theory by traversing a large map_ | Complete traversal of a large Graph | Student unable to produce a valid traversal path of 2000 moves or less | Student is able to produce a valid traversal path between 960 and 2000 | Student produces a valid traversal path of 959 moves or less |  |
 | **FINAL SCORE** | | **0-1** | **2** | **3** |  |
+
 
 
